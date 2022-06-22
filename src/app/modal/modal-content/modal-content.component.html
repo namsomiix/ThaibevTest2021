@@ -1,0 +1,56 @@
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Employee Data</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('cancel')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <div class="col-sm-8">
+        <label for="employeeId">Employee Id:</label>
+      </div>
+      <div class="col-sm-8">
+        <input type="text" formControlName="employeeId" class="form-control" />
+        <div *ngIf="editForm.controls['employeeId'].invalid && (editForm.controls['employeeId'].dirty || editForm.controls['employeeId'].touched)" class="alert-danger text-center">
+          <span *ngIf="editForm.controls['employeeId'].errors.required">Employee Id  is required!</span>
+          <span *ngIf="editForm.controls['employeeId'].errors.email">Employee Id must be a valid address!</span>
+        </div>
+        <input type="hidden" formControlName="contactId" />
+      </div> 
+      <div class="col">
+        <label for="firstName">First Name:</label>
+      </div>
+      <div class="col">
+        <input type="text" formControlName="firstName" class="form-control" />
+        <div *ngIf="editForm.controls['firstName'].invalid && (editForm.controls['firstName'].dirty || editForm.controls['firstName'].touched)" class="alert-danger text-center">
+          <span *ngIf="editForm.controls['firstName'].errors.required">First Name is required!</span>
+          <span *ngIf="editForm.controls['firstName'].errors.email">First Name must be a valid address!</span>
+        </div>
+      </div>
+      <div class="col">
+        <label for="lastName">Last Name:</label>
+      </div>
+      <div class="col">
+        <input type="text" formControlName="lastName" class="form-control" />
+        <div *ngIf="editForm.controls['lastName'].invalid && (editForm.controls['lastName'].dirty || editForm.controls['lastName'].touched)" class="alert-danger text-center">
+          <span *ngIf="editForm.controls['lastName'].errors.required">Last Name is required!</span>
+          <span *ngIf="editForm.controls['lastName'].errors.email">Last Name must be a valid address!</span>
+        </div>
+      </div>
+      <div class="col">
+        <label for="company">Company:</label>
+      </div>
+      <div class="col">
+        <input type="text" formControlName="company" class="form-control" />
+        <div *ngIf="editForm.controls['company'].invalid && (editForm.controls['company'].dirty || editForm.controls['company'].touched)" class="alert-danger text-center">
+          <span *ngIf="editForm.controls['company'].errors.required">Last Name is required!</span>
+          <span *ngIf="editForm.controls['company'].errors.email">Last Name must be a valid address!</span>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div class="modal-footer">
+    <button type="submit"  [disabled]="isLoading" class="btn btn-primary mr-2">Save</button>
+  </div>
+</form>

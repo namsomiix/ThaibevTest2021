@@ -1,0 +1,55 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+  <div class="container-fluid px-0">
+    <div class="row w-100">
+      <div class="col-2">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation"
+          (click)="isShown = !isShown">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="col-10">
+        <div class="collapse justify-content-end navbar-collapse" [ngClass]="{ 'show': isShown }"
+          id="navbarTogglerDemo03">
+          <ul class="navbar-nav mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link"  routerLinkActive="active" routerLink="/home">Home</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/atk-management-component">ATK Management</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/employee-management-component">Employee Management</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/decode-md5-component">Decode MD5</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/display-barcode-component">Display Barcode</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/generate-qr-code-component">Generate QR Code</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/download-excel-component">Download Excel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/import-csv-excel-component">Import File</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#" (click)="isShown = false" >About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" (click)="isShown = false" >Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" (click)="isShown = false" >Book Me</a> 
+            </li>-->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

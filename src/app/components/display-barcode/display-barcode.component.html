@@ -1,0 +1,85 @@
+<p>
+  display-barcode works!
+</p>
+
+<!-- <ngx-barcode [bc-value]="value" [bc-display-value]="true"></ngx-barcode> -->
+
+<div fxLayout="row">
+  <div fxLayout="column">
+    <!-- <md-input-container><textarea mdInput placeholder="bc-value" [(ngModel)]="value"></textarea></md-input-container>
+    <br/>
+    <md-select placeholder="bc-element-type" [(ngModel)]="elementType">
+      <md-option value="svg">svg</md-option>
+      <md-option value="img">img</md-option>
+      <md-option value="canvas">canvas</md-option>
+    </md-select>
+    <br/>
+    <md-select placeholder="bc-format" [(ngModel)]="format">
+      <md-option *ngFor="let code of codeList" [value]="code">{{code}}</md-option>
+    </md-select>
+    <md-input-container><input mdInput type="text" placeholder="bc-line-color" [(ngModel)]="lineColor"></md-input-container>
+    <md-input-container><input mdInput type="number" placeholder="bc-width" [(ngModel)]="width"></md-input-container>
+    <md-input-container><input mdInput type="number" placeholder="bc-height" [(ngModel)]="height"></md-input-container>
+    <md-checkbox [(ngModel)]="displayValue">bc-display-value</md-checkbox>
+    <md-input-container><input mdInput type="text" placeholder="bc-font-options" [(ngModel)]="fontOptions"></md-input-container>
+    <md-input-container><input mdInput type="text" placeholder="bc-font" [(ngModel)]="font"></md-input-container> -->
+  </div>
+  <div fxLayout="column">
+    <!-- <md-input-container><input mdInput type="text" placeholder="bc-text-align" [(ngModel)]="textAlign"></md-input-container>
+    <md-input-container><input mdInput type="text" placeholder="bc-text-position" [(ngModel)]="textPosition"></md-input-container>
+    <md-input-container><input mdInput type="number" placeholder="bc-text-margin" [(ngModel)]="textMargin"></md-input-container>
+    <md-input-container><input mdInput type="number" placeholder="bc-font-size" [(ngModel)]="fontSize"></md-input-container>
+    <md-input-container><input mdInput type="text" placeholder="bc-background" [(ngModel)]="background"></md-input-container>
+    <md-input-container><input mdInput type="number" placeholder="bc-margin" [(ngModel)]="margin"></md-input-container>
+    <md-input-container><input mdInput type="number" placeholder="bc-margin-top" [(ngModel)]="marginTop"></md-input-container>
+    <md-input-container><input mdInput type="number" placeholder="bc-margin-bottom" [(ngModel)]="marginBottom"></md-input-container>
+    <md-input-container><input mdInput type="number" placeholder="bc-margin-left" [(ngModel)]="marginLeft"></md-input-container>
+    <md-input-container><input mdInput type="number" placeholder="bc-margin-right" [(ngModel)]="marginRight"></md-input-container> -->
+  </div>
+  <div fxLayout="column">
+    <ngx-barcode *ngFor="let bcValue of values"
+      [bc-element-type]="elementType"
+      [bc-value]="bcValue"
+      [bc-format]="format"
+      [bc-line-color]="lineColor"
+      [bc-width]="width"
+      [bc-height]="height"
+      [bc-display-value]="displayValue"
+      [bc-font-options]="fontOptions"
+      [bc-font]="font"
+      [bc-text-align]="textAlign"
+      [bc-text-position]="textPosition"
+      [bc-text-margin]="textMargin"
+      [bc-font-size]="fontSize"
+      [bc-background]="background"
+      [bc-margin]="margin"
+      [bc-margin-top]="marginTop"
+      [bc-margin-bottom]="marginBottom"
+      [bc-margin-left]="marginLeft"
+      [bc-margin-right]="marginRight"
+    ></ngx-barcode>
+
+    <div fxLayout="column">
+      <ngx-barcode *ngFor="let bcValue of values2"
+        [bc-element-type]="elementType"
+        [bc-value]="bcValue"
+        [bc-format]="format"
+        [bc-line-color]="lineColor"
+        [bc-width]="width"
+        [bc-height]="height"
+        [bc-display-value]="displayValue"
+        [bc-font-options]="fontOptions"
+        [bc-font]="font"
+        [bc-text-align]="textAlign"
+        [bc-text-position]="textPosition"
+        [bc-text-margin]="textMargin"
+        [bc-font-size]="fontSize"
+        [bc-background]="background"
+        [bc-margin]="margin"
+        [bc-margin-top]="marginTop"
+        [bc-margin-bottom]="marginBottom"
+        [bc-margin-left]="marginLeft"
+        [bc-margin-right]="marginRight"
+      ></ngx-barcode>
+  </div>
+</div>

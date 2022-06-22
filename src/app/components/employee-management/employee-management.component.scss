@@ -1,0 +1,27 @@
+.content {
+    margin-top: 5%;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 5%;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-left: 0%;
+    margin-bottom: 2%;
+    margin-top: 0%;
+}
+
+.input-group.mb-3.input-search {
+    width: 640px;
+    border-radius: 8px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin-right: 10px;
+}
+
+.form-control.search {
+    height: 50px;
+    border-radius: 8px;
+}
+.mar-r10{margin-right: 10px;;}

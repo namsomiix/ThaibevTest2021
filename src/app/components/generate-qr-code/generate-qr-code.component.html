@@ -1,0 +1,28 @@
+<!-- <div style="text-align:center">
+  <h1>
+    ngx-qrcode2 demo 
+  </h1>
+  <input type="text" placeholder="Enter name to generate QR Code" [(ngModel)]="qrcodename"><br>
+</div>
+ 
+<ngx-qrcode 
+      [elementType]="elementType" 
+      [value] = "value"
+      cssClass = "aclass"
+      errorCorrectionLevel = "L">
+</ngx-qrcode> -->
+
+<div style="text-align:center">
+  <input type="text" placeholder="Enter name to generate QR Code" [(ngModel)]="qrcodename"><br>
+  <button (click)="generateQRCode()">Generate QR Code</button>
+  <ngx-qrcode 
+      *ngIf="display" 
+      id="qrCodeImage"
+      [elementType]="elementType" 
+      [value] = "value"
+      cssClass = "aclass"
+      errorCorrectionLevel = "L">
+  </ngx-qrcode>
+  <br>
+  <a [href]="href" *ngIf="display" (click)="downloadImage()" download>Download Image</a>
+</div>
